@@ -14,6 +14,8 @@ import {
   PopoverBody,
   PopoverHeader,
   Popover,
+  Pagination,
+  PageItem,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { characters } from "./characters";
@@ -32,7 +34,8 @@ const UseCharacters = () => {
   return (
     <>
       {toon.map((player) => {
-        const { id, name, race, classGroup, img, description, specialist } = player;
+        const { id, name, race, classGroup, img, description, specialist } =
+          player;
         return (
           <div key={id} className="container">
             <article className="row">
@@ -43,6 +46,7 @@ const UseCharacters = () => {
                   </div>
                   <div className="col-4 mincol">
                     <h3>Name: {name}</h3>
+                    {/* Popover */}
                     <>
                       {["bottom"].map((placement) => (
                         <OverlayTrigger
@@ -51,14 +55,16 @@ const UseCharacters = () => {
                           placement={placement}
                           overlay={
                             <Popover id={`popover-positioned-${placement}`}>
-                              <Popover.Header as="h3">Description</Popover.Header>
+                              <Popover.Header as="h3">
+                                Description
+                              </Popover.Header>
                               <Popover.Body>
                                 <strong>{description}</strong>
                               </Popover.Body>
                             </Popover>
                           }
                         >
-                          <Button className="btn btn-secondary btn-sm">
+                          <Button className="btn btn-primary btn-sm">
                             About
                           </Button>
                         </OverlayTrigger>
@@ -66,6 +72,7 @@ const UseCharacters = () => {
                     </>
                   </div>
                   <div className="col-4 mincol">
+                    {/* Popover */}
                     <>
                       {["left"].map((placement) => (
                         <OverlayTrigger
@@ -81,13 +88,14 @@ const UseCharacters = () => {
                             </Popover>
                           }
                         >
-                          <Button className="btn btn-primary btn-sm">
+                          <Button className="btn btn-success btn-sm">
                             Race
                           </Button>
                         </OverlayTrigger>
                       ))}
                     </>
                     <br />
+                    {/* Popover */}
                     <>
                       {["left"].map((placement) => (
                         <OverlayTrigger
@@ -103,13 +111,14 @@ const UseCharacters = () => {
                             </Popover>
                           }
                         >
-                          <Button className="btn btn-primary btn-sm">
+                          <Button className="btn btn-success btn-sm">
                             Class
                           </Button>
                         </OverlayTrigger>
                       ))}
                     </>
                     <br />
+                    {/* Popover */}
                     <>
                       {["left"].map((placement) => (
                         <OverlayTrigger
@@ -118,21 +127,24 @@ const UseCharacters = () => {
                           placement={placement}
                           overlay={
                             <Popover id={`popover-positioned-${placement}`}>
-                              <Popover.Header as="h3">Specialist</Popover.Header>
+                              <Popover.Header as="h3">
+                                Specialist
+                              </Popover.Header>
                               <Popover.Body>
                                 <strong>{specialist}</strong>
                               </Popover.Body>
                             </Popover>
                           }
                         >
-                          <Button className="btn btn-primary btn-sm">
+                          <Button className="btn btn-success btn-sm">
                             Specialization
                           </Button>
                         </OverlayTrigger>
                       ))}
                     </>
                   </div>
-                  <aside className="col-4"></aside>
+                  <div className="col-4"></div>
+                  {/* Remove Button */}
                   <button
                     className="btn btn-danger btn-outline-dark col-4"
                     onClick={() => removeItem(id)}
@@ -146,10 +158,10 @@ const UseCharacters = () => {
         );
       })}
       <br />
+      {/* Remove All Heroes Button */}
       <div className="row">
-        <div className="col-2"></div>
         <button
-          className="btn btn-warning btn-outline-dark col-8"
+          className="btn btn-warning btn-outline-dark"
           onClick={() => setToon([])}
         >
           Remove All Heroes
@@ -159,7 +171,5 @@ const UseCharacters = () => {
     </>
   );
 };
-
-// Popover Attempt
 
 export default UseCharacters;
