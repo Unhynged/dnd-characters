@@ -36,8 +36,9 @@ const UseCharacters = () => {
         return (
           <div key={id} className="container">
             <article className="row">
-              <div className="col sectioncol">
+              <div className="col">
                 <section className="row mt-3 mb-3">
+                    
                   <div className="col-4 img mincol">
                     <img className="img-thumbnail" src={img} alt={name}></img>
                   </div>
@@ -58,8 +59,8 @@ const UseCharacters = () => {
                             </Popover>
                           }
                         >
-                          <Button variant="secondary">
-                            Description
+                          <Button className="btn btn-secondary btn-sm">
+                            About
                           </Button>
                         </OverlayTrigger>
                       ))}

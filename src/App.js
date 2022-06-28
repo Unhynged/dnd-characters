@@ -18,7 +18,7 @@ import { characters } from "./characters";
 function App() {
   return (
     <div className='background'>
-      <div className="container containerZ">
+      <div className="container">
         <main>
         <Character />
         </main>

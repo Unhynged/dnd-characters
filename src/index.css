@@ -17,7 +17,11 @@ article {
   width: 70vw;
   max-width: var(--fixed-width);
   margin: 0 auto;
+  grid-template-columns: auto 1fr;
+  text-align: center;
+  text-size-adjust: inherit;
 }
+
 @media only screen and (max-width: 600px) {
   .container {
     width: 85vw;
