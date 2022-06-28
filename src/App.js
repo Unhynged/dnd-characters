@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import {
   Container,
   Row,
@@ -12,12 +12,12 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import Character from "./UseCharacters";
 import "./index.css";
-import {useState} from 'react';
 import { characters } from "./characters";
 
 function App() {
   return (
     <div className='background'>
+      <div className='Header'>DnD Characters</div>
       <div className="container">
         <main>
         <Character />

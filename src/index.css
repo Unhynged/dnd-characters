@@ -68,3 +68,15 @@ h4 {
 .background {
   background-color: saddlebrown;
 }
+.Header {
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  text-align: center;
+  font-size: 2rem;
+  background-color: rgb(240, 63, 63);
+  border: thick black;
+  border-width: 5px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
