@@ -46,7 +46,7 @@ const UseCharacters = () => {
                   </div>
                   <div className="col-4 mincol">
                     <h3>Name: {name}</h3>
-                    {/* Popover */}
+                    {/* Popover About*/}
                     <>
                       {["bottom"].map((placement) => (
                         <OverlayTrigger
@@ -72,7 +72,7 @@ const UseCharacters = () => {
                     </>
                   </div>
                   <div className="col-4 mincol">
-                    {/* Popover */}
+                    {/* Popover Race*/}
                     <>
                       {["left"].map((placement) => (
                         <OverlayTrigger
@@ -95,7 +95,7 @@ const UseCharacters = () => {
                       ))}
                     </>
                     <br />
-                    {/* Popover */}
+                    {/* Popover Class*/}
                     <>
                       {["left"].map((placement) => (
                         <OverlayTrigger
@@ -118,7 +118,7 @@ const UseCharacters = () => {
                       ))}
                     </>
                     <br />
-                    {/* Popover */}
+                    {/* Popover Specialization*/}
                     <>
                       {["left"].map((placement) => (
                         <OverlayTrigger
@@ -143,14 +143,14 @@ const UseCharacters = () => {
                       ))}
                     </>
                   </div>
-                  <div className="col-4"></div>
                   {/* Remove Button */}
-                  <button
+                  <div className='col'><button
                     className="btn btn-danger btn-outline-dark col-4"
                     onClick={() => removeItem(id)}
                   >
                     Remove
-                  </button>
+                  </button></div>
+                  
                 </section>
               </div>
             </article>
