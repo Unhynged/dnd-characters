@@ -12,14 +12,18 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import Character from "./UseCharacters";
 import "./index.css";
+import {useState} from 'react';
+import { characters } from "./characters";
 
 function App() {
   return (
-    <main>
-      <div className="container">
+    <div className='background'>
+      <div className="container containerZ">
+        <main>
         <Character />
+        </main>
       </div>
-    </main>
+    </div>
   );
 }
 
