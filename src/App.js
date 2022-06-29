@@ -18,11 +18,9 @@ function App() {
   return (
     <div className='background'>
       <div className='Header'>DnD Characters</div>
-      <div className="container">
         <main>
         <Character />
         </main>
-      </div>
     </div>
   );
 }

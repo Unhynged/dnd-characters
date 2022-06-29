@@ -74,7 +74,7 @@ const UseCharacters = () => {
                   <div className="col-4 mincol">
                     {/* Popover Race*/}
                     <>
-                      {["left"].map((placement) => (
+                      {["bottom"].map((placement) => (
                         <OverlayTrigger
                           trigger="click"
                           key={placement}
@@ -97,7 +97,7 @@ const UseCharacters = () => {
                     <br />
                     {/* Popover Class*/}
                     <>
-                      {["left"].map((placement) => (
+                      {["bottom"].map((placement) => (
                         <OverlayTrigger
                           trigger="click"
                           key={placement}
@@ -120,7 +120,7 @@ const UseCharacters = () => {
                     <br />
                     {/* Popover Specialization*/}
                     <>
-                      {["left"].map((placement) => (
+                      {["bottom"].map((placement) => (
                         <OverlayTrigger
                           trigger="click"
                           key={placement}
@@ -144,12 +144,13 @@ const UseCharacters = () => {
                     </>
                   </div>
                   {/* Remove Button */}
-                  <div className='col'><button
-                    className="btn btn-danger btn-outline-dark col-4"
-                    onClick={() => removeItem(id)}
-                  >
-                    Remove
-                  </button></div>
+                  
+                    <button
+                      className="btn btn-danger btn-outline-dark col-4"
+                      onClick={() => removeItem(id)}
+                    >
+                      Remove
+                    </button>
                   
                 </section>
               </div>
@@ -159,9 +160,9 @@ const UseCharacters = () => {
       })}
       <br />
       {/* Remove All Heroes Button */}
-      <div className="row">
+      <div className='row-1'>
         <button
-          className="btn btn-warning btn-outline-dark"
+          className="btn btn-warning btn-outline-dark btn-lg"
           onClick={() => setToon([])}
         >
           Remove All Heroes

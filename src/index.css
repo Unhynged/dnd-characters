@@ -26,6 +26,7 @@ article {
 
 .mincol {
   min-width: 130px;
+  min-height: 25vh;
   background-color: rgb(217, 233, 246);
   border-radius: 10px;
   border: double thick #32a1ce;
@@ -78,6 +79,17 @@ h4 {
   margin-bottom: 5px;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+[class*='row-'] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Media Screen Sizes */
 
 @media only screen and (max-width: 768px) {
@@ -90,9 +102,20 @@ h4 {
     justify-content: center;
     align-items: center;
   }
+  [class*='row-'] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .background {
+    background-size:cover;
+  }
+  .mincol {
+    min-height: 0;
   }
 }
